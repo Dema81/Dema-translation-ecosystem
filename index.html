@@ -16,17 +16,23 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      transition: all 0.3s ease;
+      transition: all 0.32s ease;
       height: 100%;
+      cursor: pointer;
     }
 
     .card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.14);
+      color: white;
     }
 
-    .highlight {
-      background: linear-gradient(90deg, #5B5FC7, #7B83EB);
+    /* ensure internal text becomes readable on dark hover backgrounds */
+    .card:hover h3,
+    .card:hover p,
+    .card:hover ul li,
+    .card:hover .icon-emoji {
+      color: white !important;
     }
 
     .pipe-icon {
@@ -37,14 +43,23 @@
     }
 
     .card h3 {
-      min-height: 2.5rem; /* mantiene i titoli alla stessa altezza */
+      min-height: 2.5rem; /* keeps titles aligned */
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
     .card ul {
-      flex-grow: 1; /* spinge il bottone in basso */
+      flex-grow: 1; /* pushes the button to the bottom */
+    }
+
+    /* small visual polish for emoji icons inside cards */
+    .icon-emoji {
+      font-size: 2.75rem;
+      line-height: 1;
+      display: block;
+      margin-bottom: 0.75rem;
+      text-align: center;
     }
   </style>
 </head>
@@ -53,28 +68,28 @@
   <!-- Header -->
   <header class="text-center py-10">
     <img 
-      class="block mx-auto mb-2 w-48" 
-      src="images\logo_2.png"
+      class="block mx-auto mb-2 w-48 max-w-full h-auto" 
+      src="images/logo_2.png"
       alt="Company Logo"
     />
     <h2 class="text-xl text-gray-600">🌍 Translation Technology Ecosystem</h2>
   </header>
 
   <!-- Intro -->
-  <section class="text-center max-w-3xl mx-auto mb-10">
+  <section class="text-center max-w-3xl mx-auto mb-10 px-4">
     <h3 class="text-2xl font-semibold mb-2">✨ Choose the solution that fits your translation workflow</h3>
     <p class="text-gray-600">
-      From Centralized Translation Memories to Text Optimization, AI QA Check and Neural Machine Translation   
+      From Centralized Translation Memories to Text Optimization, AI QA Check and Neural Machine Translation — 
       DEMA Solutions delivers cost savings, quality, consistency, and speed in one seamless process.
     </p>
   </section>
 
-  <!-- Comparison Section -->
+  <!-- Cards Section -->
   <section class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto px-6 pb-20 items-stretch">
     
     <!-- 1Memory -->
-    <div class="card bg-white rounded-2xl shadow p-8 border-t-4 border-teal-500">
-      <div class="text-6xl mb-4 text-center">🧠</div>
+    <div class="card bg-white rounded-2xl shadow p-8 border-t-4 border-teal-500 hover:bg-teal-600">
+      <div class="icon-emoji text-center">🧠</div>
       <h3 class="text-2xl font-bold mb-2 text-teal-600 text-center">1MEMORY</h3>
       <p class="text-sm text-gray-600 mb-6 italic text-center">Centralized Translation Memory Portal</p>
       <p class="text-sm font-bold text-gray-600 text-center mb-4">
@@ -93,36 +108,36 @@
       <p class="mt-6 text-sm text-gray-500">
         💬 Free service (includes pre/post-processing) - requires 30% annual project share.
       </p>
-      <a href="mailto:g.gambuto@dema-solutions.com?subject=1MEMORY - INFO REQUEST">
-        <button class="mt-6 bg-teal-600 hover:bg-teal-700 text-white px-6 py-2 rounded-full w-full transition">
+      <a href="mailto:g.gambuto@dema-solutions.com?subject=1MEMORY - INFO REQUEST" aria-label="Request 1Memory info">
+        <button class="mt-6 bg-white text-teal-700 hover:bg-gray-100 font-semibold px-6 py-2 rounded-full w-full transition">
           Request Access
         </button>
       </a>
     </div>
 
     <!-- PRAISE -->
-    <div class="card bg-white rounded-2xl shadow p-8 border-t-4 border-indigo-500 highlight text-white">
-      <div class="text-6xl mb-4 text-center">🤖</div>
-      <h3 class="text-2xl font-bold mb-2 text-center">PRAISE</h3>
-      <p class="text-sm mb-6 italic opacity-90 text-center">Text Optimization & AI Quality Check</p>
-      <p class="text-sm font-bold opacity-90 text-center mb-4">
+    <div class="card bg-white rounded-2xl shadow p-8 border-t-4 border-indigo-500 hover:bg-indigo-600">
+      <div class="icon-emoji text-center">🤖</div>
+      <h3 class="text-2xl font-bold mb-2 text-indigo-600 text-center">PRAISE</h3>
+      <p class="text-sm text-gray-600 mb-6 italic text-center">Text Optimization & AI Quality Check</p>
+      <p class="text-sm font-bold text-gray-600 text-center mb-4">
         Want cheaper, faster, and higher-quality translations?<br>
         PRAISE is the answer!
-      </p>      
-      <ul class="space-y-3 text-sm">
+      </p>
+      <ul class="space-y-3 text-gray-700 text-sm">
         <li>✅ Start by applying your Translation Memory and use Machine Translation for the rest</li>
         <li>✅ Multiple, tailored-made AI-powered QA checks</li>
         <li>✅ Apply the DEMA Style Guide</li>
-        <li>✅ Rewrites unclear or non-MT-friendly content</li>
+        <li>✅ Rewrites unclear or non-MT-friendly content (with client approval)</li>
         <li>✅ Client eventually approves rewrite suggestions</li>
         <li>✅ Linguists handle only the tricky sentences</li>
         <li>✅ Cuts post-editing and delivery time by up to 50%</li>
         <li>✅ Ideal for technical manuals and structured docs</li>
       </ul>
-      <p class="mt-6 text-sm opacity-80">
-        💬 Save 40% compared to a traditional translation project, with no setup fees required...
+      <p class="mt-6 text-sm text-gray-500">
+        💬 Save ~40% compared to a traditional translation project, with no setup fees required...
       </p>
-      <a href="mailto:g.gambuto@dema-solutions.com?subject=PRAISE - INFO REQUEST">
+      <a href="mailto:g.gambuto@dema-solutions.com?subject=PRAISE - INFO REQUEST" aria-label="Request PRAISE info">
         <button class="mt-6 bg-white text-indigo-700 font-semibold hover:bg-gray-100 px-6 py-2 rounded-full w-full transition">
           Learn More
         </button>
@@ -130,9 +145,9 @@
     </div>
 
     <!-- TUBE -->
-    <div class="card bg-white rounded-2xl shadow p-8 border-t-4 border-green-500">
+    <div class="card bg-white rounded-2xl shadow p-8 border-t-4 border-green-500 hover:bg-green-600">
       <img 
-        src="images\mario-super-mario.gif"
+        src="images/mario-super-mario.gif"
         class="pipe-icon object-contain"
         alt="TUBE Icon"
       />
@@ -153,8 +168,8 @@
       <p class="mt-6 text-sm text-gray-500">
         💬 Economical usage-based cost.
       </p>
-      <a href="mailto:g.gambuto@dema-solutions.com?subject=TUBE - INFO REQUEST">
-        <button class="mt-6 bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-full w-full transition">
+      <a href="mailto:g.gambuto@dema-solutions.com?subject=TUBE - INFO REQUEST" aria-label="Request TUBE info">
+        <button class="mt-6 bg-white text-green-700 hover:bg-gray-100 font-semibold px-6 py-2 rounded-full w-full transition">
           Try TUBE
         </button>
       </a>
@@ -168,22 +183,27 @@
       <p class="mb-10 text-lg opacity-90">
         A seamless workflow connecting centralized memory, optimized content, and AI-assisted translation — ensuring quality, speed, and transparency.
       </p>
+
       <div class="flex flex-col md:flex-row items-center justify-between gap-6">
         <div class="flex flex-col items-center">
           <div class="text-5xl mb-2">🧠</div>
           <p class="font-semibold">1MEMORY</p>
           <p class="text-sm opacity-80">Centralized TM & Glossary</p>
         </div>
+
         <div class="text-4xl md:text-5xl">➡️</div>
+
         <div class="flex flex-col items-center">
           <div class="text-5xl mb-2">🤖</div>
           <p class="font-semibold">PRAISE</p>
           <p class="text-sm opacity-80">Text Optimization & AI Quality Check</p>
         </div>
+
         <div class="text-4xl md:text-5xl">➡️</div>
+
         <div class="flex flex-col items-center">
           <img 
-            src="images\mario-super-mario.gif"
+            src="images/mario-super-mario.gif"
             class="pipe-icon object-contain"
             alt="TUBE Icon"
           />
@@ -202,4 +222,3 @@
 
 </body>
 </html>
-

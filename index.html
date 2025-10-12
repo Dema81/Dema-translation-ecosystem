@@ -27,7 +27,6 @@
       color: white;
     }
 
-    /* ensure internal text becomes readable on dark hover backgrounds */
     .card:hover h3,
     .card:hover p,
     .card:hover ul li,
@@ -43,17 +42,16 @@
     }
 
     .card h3 {
-      min-height: 2.5rem; /* keeps titles aligned */
+      min-height: 2.5rem;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
     .card ul {
-      flex-grow: 1; /* pushes the button to the bottom */
+      flex-grow: 1;
     }
 
-    /* small visual polish for emoji icons inside cards */
     .icon-emoji {
       font-size: 2.75rem;
       line-height: 1;
@@ -65,6 +63,16 @@
 </head>
 
 <body class="text-gray-800">
+  <!-- Language Switcher -->
+  <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+    <a href="./index.html" title="English">
+      <img src="https://flagcdn.com/24x18/gb.png" alt="English" style="margin-right: 8px; border: 1px solid #ccc;">
+    </a>
+    <a href="./it/index.html" title="Italiano">
+      <img src="https://flagcdn.com/24x18/it.png" alt="Italiano" style="border: 1px solid #ccc;">
+    </a>
+  </div>
+
   <!-- Header -->
   <header class="text-center py-10">
     <img 
@@ -223,10 +231,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-

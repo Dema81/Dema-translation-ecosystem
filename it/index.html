@@ -5,14 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DEMA Solutions – Ecosistema di Traduzione</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="../lang-switcher.js" defer></script>
   <link rel="icon" href="https://www.dema-solutions.com/wp-content/uploads/2022/09/favicon.png" />
   <style>
     body {
       background: linear-gradient(180deg, #f9fafb 0%, #eef2f7 100%);
       font-family: 'Inter', sans-serif;
     }
-
+    /* Stessi stili dell'inglese */
     .card {
       display: flex;
       flex-direction: column;
@@ -64,59 +63,58 @@
 </head>
 
 <body class="text-gray-800">
-
-  <!-- Language Selector -->
-  <select onchange="switchLanguage(this.value)" class="fixed top-4 right-4 p-2 border rounded-lg">
-    <option value="en">English</option>
-    <option value="it" selected>Italiano</option>
-    <option value="fr">Français</option>
-    <option value="de">Deutsch</option>
-    <option value="es">Español</option>
-  </select>
+  <!-- Language Switcher -->
+  <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+    <a href="../index.html" title="English">
+      <img src="https://flagcdn.com/24x18/gb.png" alt="English" style="margin-right: 8px; border: 1px solid #ccc;">
+    </a>
+    <a href="./index.html" title="Italiano">
+      <img src="https://flagcdn.com/24x18/it.png" alt="Italiano" style="border: 1px solid #ccc;">
+    </a>
+  </div>
 
   <!-- Header -->
   <header class="text-center py-10">
     <img 
       class="block mx-auto mb-2 w-48 max-w-full h-auto" 
       src="../images/logo_2.png"
-      alt="Logo DEMA"
+      alt="Company Logo"
     />
-    <h2 class="text-xl text-gray-600">🌍 Ecosistema Tecnologico di Traduzione</h2>
+    <h2 class="text-xl text-gray-600">🌍 Ecosistema di Traduzione</h2>
   </header>
 
   <!-- Intro -->
   <section class="text-center max-w-3xl mx-auto mb-10 px-4">
-    <h3 class="text-2xl font-semibold mb-2">✨ Scegli la soluzione più adatta al tuo flusso di traduzione</h3>
+    <h3 class="text-2xl font-semibold mb-2">✨ Scegli la soluzione adatta al tuo flusso di lavoro di traduzione</h3>
     <p class="text-gray-600">
-      DEMA Solutions garantisce risparmi, qualità, coerenza e velocità in un unico processo integrato.
+      DEMA Solutions garantisce risparmio, qualità, coerenza e velocità in un unico processo.
     </p>
   </section>
 
   <!-- Cards Section -->
   <section class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto px-6 pb-20 items-stretch">
-
     <!-- 1Memory -->
     <div class="card bg-white rounded-2xl shadow p-8 border-t-4 border-teal-500 hover:bg-teal-600">
       <div class="icon-emoji text-center">🧠</div>
       <h3 class="text-2xl font-bold mb-2 text-teal-600 text-center">1MEMORY</h3>
       <p class="text-sm text-gray-600 mb-6 italic text-center">Portale di Memoria di Traduzione Centralizzata</p>
       <p class="text-sm font-bold text-gray-600 text-center mb-4">
-        Hai bisogno di ricevere più preventivi contemporaneamente?<br>
+        Devi richiedere più preventivi contemporaneamente?<br>
         1Memory è la soluzione perfetta per te!
       </p>
       <ul class="space-y-3 text-gray-700 text-sm">
-        <li>✅ Centralizza tutte le tue Translation Memory</li>
+        <li>✅ Centralizza tutte le tue Memorie di Traduzione</li>
         <li>✅ Garantisce terminologia coerente tra fornitori</li>
-        <li>✅ Riduce le parole conteggiate → costi più bassi</li>
-        <li>✅ Consegne più veloci</li>
-        <li>✅ Portale personalizzato e con il tuo brand</li>
-        <li>✅ Log di analisi condiviso e visibile a tutti i fornitori</li>
-        <li>✅ TM e Glossario di tua proprietà</li>
+        <li>✅ Riduce il conteggio parole → minori costi</li>
+        <li>✅ Consegna più rapida</li>
+        <li>✅ Portale personalizzato e brandizzato</li>
+        <li>✅ Registro analisi condiviso visibile a tutti i fornitori</li>
+        <li>✅ Possiedi completamente Memoria di Traduzione + Glossario</li>
       </ul>
       <p class="mt-6 text-sm text-gray-500">
-        💬 Servizio gratuito (incluso pre/post-processing) — scopri come usarlo gratis!
+        💬 Servizio gratuito (include pre/post-elaborazione) - scopri come usarlo senza costi!
       </p>
-      <a href="mailto:g.gambuto@dema-solutions.com?subject=1MEMORY - RICHIESTA INFO" aria-label="Richiedi info 1Memory">
+      <a href="mailto:g.gambuto@dema-solutions.com?subject=1MEMORY - INFO REQUEST" aria-label="Richiedi info 1Memory">
         <button class="mt-6 bg-white text-teal-700 hover:bg-gray-100 font-semibold px-6 py-2 rounded-full w-full transition">
           Richiedi Accesso
         </button>
@@ -127,25 +125,25 @@
     <div class="card bg-white rounded-2xl shadow p-8 border-t-4 border-indigo-500 hover:bg-indigo-600">
       <div class="icon-emoji text-center">🤖</div>
       <h3 class="text-2xl font-bold mb-2 text-indigo-600 text-center">PRAISE</h3>
-      <p class="text-sm text-gray-600 mb-6 italic text-center">Ottimizzazione Testo & Controllo Qualità AI</p>
+      <p class="text-sm text-gray-600 mb-6 italic text-center">Ottimizzazione Testi & Controllo Qualità AI</p>
       <p class="text-sm font-bold text-gray-600 text-center mb-4">
-        Vuoi traduzioni più economiche, veloci e di qualità?<br>
+        Vuoi traduzioni più economiche, rapide e di qualità superiore?<br>
         PRAISE è la risposta!
       </p>
       <ul class="space-y-3 text-gray-700 text-sm">
-        <li>✅ Applica prima la TM e usa l’MT per il resto del contenuto</li>
-        <li>✅ QA automatici multipli e personalizzati</li>
-        <li>✅ Applicazione della Style Guide DEMA</li>
-        <li>✅ Riscrive testi poco chiari o non adatti all’MT</li>
-        <li>✅ Tu approvi le riscritture suggerite</li>
-        <li>✅ I linguisti gestiscono solo le frasi più complesse</li>
-        <li>✅ Riduce il post-editing e i tempi di consegna fino al 50%</li>
+        <li>✅ Applica prima la tua Memoria di Traduzione e usa la Traduzione Automatica per il resto</li>
+        <li>✅ Controlli QA multipli su misura con AI</li>
+        <li>✅ Applica il DEMA Style Guide</li>
+        <li>✅ Riscrive contenuti poco chiari o non ottimizzati per MT</li>
+        <li>✅ Approvi le riscritture suggerite</li>
+        <li>✅ I linguisti gestiscono solo le frasi complesse</li>
+        <li>✅ Riduce fino al 50% post-editing e tempi di consegna</li>
         <li>✅ Ideale per manuali tecnici e documenti strutturati</li>
       </ul>
       <p class="mt-6 text-sm text-gray-500">
-        💬 Risparmia il 40% rispetto a un progetto tradizionale, senza costi di setup.
+        💬 Risparmia il 40% rispetto a un progetto tradizionale, senza costi di setup...
       </p>
-      <a href="mailto:g.gambuto@dema-solutions.com?subject=PRAISE - RICHIESTA INFO" aria-label="Richiedi info PRAISE">
+      <a href="mailto:g.gambuto@dema-solutions.com?subject=PRAISE - INFO REQUEST" aria-label="Richiedi info PRAISE">
         <button class="mt-6 bg-white text-indigo-700 font-semibold hover:bg-gray-100 px-6 py-2 rounded-full w-full transition">
           Scopri di più
         </button>
@@ -157,28 +155,28 @@
       <img 
         src="../images/mario-super-mario.gif"
         class="pipe-icon object-contain"
-        alt="Icona TUBE"
+        alt="TUBE Icon"
       />
       <h3 class="text-2xl font-bold mb-2 text-green-600 text-center">TUBE</h3>
       <p class="text-sm text-gray-600 mb-6 italic text-center">
-        Traduzione Smart & Consegna
+        Traduzioni Smart & Consegna
       </p>
       <p class="text-sm font-bold text-gray-600 text-center mb-4">
-        Perché spendere di più quando puoi gestire le traduzioni da solo?<br>
+        Perché spendere soldi inutilmente quando puoi gestire le traduzioni da solo?<br>
         Entra in TUBE!
       </p>
       <ul class="space-y-3 text-gray-700 text-sm">
-        <li>✅ Upload diretto e accesso immediato alla traduzione</li>
+        <li>✅ Upload diretto e accesso immediato alle traduzioni</li>
         <li>✅ Neural MT + TM e Glossario</li>
         <li>✅ Revisione umana per qualità premium</li>
-        <li>✅ Traduci in un numero illimitato di lingue</li>
-        <li>✅ Adatto a tutti i tipi di contenuti</li>
-        <li>✅ Integrazione CAT tool completa e supporto tecnico</li>
+        <li>✅ Traduci in lingue illimitate</li>
+        <li>✅ Adatto a tutti i tipi di contenuto</li>
+        <li>✅ Integrazione completa CAT tool e supporto tecnico</li>
       </ul>
       <p class="mt-6 text-sm text-gray-500">
-        💬 Prezzo economico a consumo.
+        💬 Costo basato sull'utilizzo, economico.
       </p>
-      <a href="mailto:g.gambuto@dema-solutions.com?subject=TUBE - RICHIESTA INFO" aria-label="Richiedi info TUBE">
+      <a href="mailto:g.gambuto@dema-solutions.com?subject=TUBE - INFO REQUEST" aria-label="Richiedi info TUBE">
         <button class="mt-6 bg-white text-green-700 hover:bg-gray-100 font-semibold px-6 py-2 rounded-full w-full transition">
           Prova TUBE
         </button>
@@ -189,9 +187,9 @@
   <!-- Ecosystem Flow Section -->
   <section class="bg-gradient-to-r from-teal-600 via-indigo-600 to-green-600 text-white py-16">
     <div class="max-w-5xl mx-auto text-center px-6">
-      <h3 class="text-3xl font-bold mb-6">🌍 L’Ecosistema Tecnologico DEMA</h3>
+      <h3 class="text-3xl font-bold mb-6">🌍 Ecosistema di Traduzione DEMA</h3>
       <p class="mb-10 text-lg opacity-90">
-        Un flusso di lavoro integrato che collega memoria centralizzata, contenuti ottimizzati e traduzione AI — garantendo qualità, velocità e trasparenza.
+        Un workflow senza soluzione di continuità che connette memoria centralizzata, contenuti ottimizzati e traduzione assistita da AI — garantendo qualità, velocità e trasparenza.
       </p>
 
       <div class="flex flex-col md:flex-row items-center justify-between gap-6">
@@ -206,7 +204,7 @@
         <div class="flex flex-col items-center">
           <div class="text-5xl mb-2">🤖</div>
           <p class="font-semibold">PRAISE</p>
-          <p class="text-sm opacity-80">Ottimizzazione Testo & QA AI</p>
+          <p class="text-sm opacity-80">Ottimizzazione Testi & QA AI</p>
         </div>
 
         <div class="text-4xl md:text-5xl">➡️</div>
@@ -215,10 +213,10 @@
           <img 
             src="../images/mario-super-mario.gif"
             class="pipe-icon object-contain"
-            alt="Icona TUBE"
+            alt="TUBE Icon"
           />
           <p class="font-semibold">TUBE</p>
-          <p class="text-sm opacity-80">Traduzione Smart & Consegna</p>
+          <p class="text-sm opacity-80">Traduzioni Smart & Consegna</p>
         </div>
       </div>
     </div>

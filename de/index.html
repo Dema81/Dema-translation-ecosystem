@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DEMA Solutions – Das intelligente Übersetzungs-Ökosystem</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="https://www.dema-solutions.com/wp-content/uploads/2022/09/favicon.png" />
+  <style>
+    body {
+      background: linear-gradient(180deg, #f9fafb 0%, #eef2f7 100%);
+      font-family: 'Inter', sans-serif;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      transition: all 0.32s ease;
+      height: 100%;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.14);
+      color: white;
+    }
+
+    .card:hover h3,
+    .card:hover p,
+    .card:hover ul li,
+    .card:hover .icon-emoji {
+      color: white !important;
+    }
+
+    .pipe-icon {
+      width: 100px;
+      height: auto;
+      display: block;
+      margin: 0 auto 16px;
+    }
+
+    .card h3 {
+      min-height: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card ul {
+      flex-grow: 1;
+    }
+
+    .icon-emoji {
+      font-size: 2.75rem;
+      line-height: 1;
+      display: block;
+      margin-bottom: 0.75rem;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body class="text-gray-800">
+  <!-- Language Switcher -->
+  <div style="position: fixed; top: 20px; right: 20px; z-index: 1000; display: flex; gap: 8px;">
+    <!-- English (Root) -->
+    <a href="../index.html" title="English">
+      <img src="https://flagcdn.com/24x18/gb.png" alt="English" style="border: 1px solid #ccc;">
+    </a>
+    <!-- Italiano (Folder) -->
+    <a href="../it/index.html" title="Italiano">
+      <img src="https://flagcdn.com/24x18/it.png" alt="Italiano" style="border: 1px solid #ccc;">
+    </a>
+    <!-- Deutsch (Current) -->
+    <a href="./index.html" title="Deutsch">
+      <img src="https://flagcdn.com/24x18/de.png" alt="Deutsch" style="border: 1px solid #ccc; opacity: 0.6; cursor: default;">
+    </a>
+  </div>
+
+  <!-- Header -->
+  <header class="text-center py-10">
+    <!-- Nota: ../images perché siamo nella cartella 'de' -->
+    <img 
+      class="block mx-auto mb-2 w-48 max-w-full h-auto" 
+      src="../images/logo_2.png"
+      alt="Company Logo"
+    />
+    <h2 class="text-xl text-gray-600">🌍 Technologie-Ökosystem für Übersetzungen</h2>
+  </header>
+
+  <!-- Intro -->
+  <section class="text-center max-w-3xl mx-auto mb-10 px-4">
+    <h3 class="text-2xl font-semibold mb-2">💡 Wählen Sie die Lösung, die zu Ihrem Workflow passt 💡</h3>
+    <p class="text-gray-600">
+      DEMA Solutions liefert Kosteneinsparungen, Qualität, Konsistenz und Schnelligkeit in einem nahtlosen Prozess.
+    </p>
+  </section>
+
+  <!-- Cards Section -->
+  <section class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto px-6 pb-20 items-stretch">
+    
+    <!-- 1Memory -->
+    <div class="card bg-white rounded-2xl shadow p-8 border-t-4 border-teal-500 hover:bg-teal-600">
+      <div class="icon-emoji text-center">🧠</div>
+      <h3 class="text-2xl font-bold mb-2 text-teal-600 text-center">1MEMORY</h3>
+      <p class="text-sm text-gray-600 mb-6 italic text-center">Zentralisiertes Translation-Memory-Portal</p>
+      <p class="text-sm font-bold text-gray-600 text-center mb-4">
+        Müssen Sie mehrere Angebote gleichzeitig einholen?<br>
+        1Memory ist die perfekte Lösung für Sie!
+      </p>
+      <ul class="space-y-3 text-gray-700 text-sm">
+        <li>✅ Zentralisiert all Ihre Translation Memories</li>
+        <li>✅ Gewährleistet konsistente Terminologie bei allen Lieferanten</li>
+        <li>✅ Reduziert die Wortanzahl → geringere Kosten</li>
+        <li>✅ Schnellere Lieferung</li>
+        <li>✅ Ihr eigenes, personalisiertes Portal im Firmendesign</li>
+        <li>✅ Geteiltes Analyse-Protokoll, sichtbar für alle Lieferanten</li>
+        <li>✅ Sie besitzen die Translation Memory + Glossare zu 100%</li>
+      </ul>
+      <p class="mt-6 text-sm text-gray-500">
+        💬 Kostenloser Service (inkl. Vor-/Nachbearbeitung) - entdecken Sie die gratis Nutzung!
+      </p>
+      <a href="mailto:g.gambuto@dema-solutions.com?subject=1MEMORY - ANFRAGE INFORMATIONEN" aria-label="Infos zu 1Memory anfordern">
+        <button class="mt-6 bg-white text-teal-700 hover:bg-gray-100 font-semibold px-6 py-2 rounded-full w-full transition">
+          Zugang anfordern
+        </button>
+      </a>
+    </div>
+
+    <!-- PRAISE -->
+    <div class="card bg-white rounded-2xl shadow p-8 border-t-4 border-indigo-500 hover:bg-indigo-600">
+      <div class="icon-emoji text-center">🤖</div>
+      <h3 class="text-2xl font-bold mb-2 text-indigo-600 text-center">PRAISE</h3>
+      <p class="text-sm text-gray-600 mb-6 italic text-center">Textoptimierung & mehrfache KI-Qualitätsprüfungen</p>
+      <p class="text-sm font-bold text-gray-600 text-center mb-4">
+        Wollen Sie günstigere, schnellere und hochwertigere Übersetzungen?<br>
+        PRAISE ist die Antwort!
+      </p>
+      <ul class="space-y-3 text-gray-700 text-sm">
+        <li>✅ Beginnend mit Ihren TMs, der Rest per maschineller Übersetzung</li>
+        <li>✅ Mehrfache, maßgeschneiderte KI-gestützte QA-Prüfungen</li>
+        <li>✅ Anwendung des DEMA Style Guides</li>
+        <li>✅ Schreibt unklare Inhalte um (MT-freundlich)</li>
+        <li>✅ Sie genehmigen die Änderungsvorschläge</li>
+        <li>✅ Linguisten bearbeiten nur die komplexen Sätze</li>
+        <li>✅ Reduziert Post-Editing und Lieferzeit um bis zu 50%</li>
+        <li>✅ Ideal für technische Handbücher und strukturierte Dokumente</li>
+      </ul>
+      <p class="mt-6 text-sm text-gray-500">
+        💬 Sparen Sie 40% im Vergleich zu klassischen Übersetzungsprojekten, ohne Einrichtungsgebühren...
+      </p>
+      <a href="mailto:g.gambuto@dema-solutions.com?subject=PRAISE - ANFRAGE INFORMATIONEN" aria-label="Infos zu PRAISE anfordern">
+        <button class="mt-6 bg-white text-indigo-700 font-semibold hover:bg-gray-100 px-6 py-2 rounded-full w-full transition">
+          Mehr erfahren
+        </button>
+      </a>
+    </div>
+
+    <!-- TUBE -->
+    <div class="card bg-white rounded-2xl shadow p-8 border-t-4 border-green-500 hover:bg-green-600">
+      <img 
+        src="../images/mario-super-mario.gif"
+        class="pipe-icon object-contain"
+        alt="TUBE Icon"
+      />
+      <h3 class="text-2xl font-bold mb-2 text-green-600 text-center">TUBE</h3>
+      <p class="text-sm text-gray-600 mb-6 italic text-center">
+        Smarte Übersetzungen & superschnelle Lieferung
+      </p>
+      <p class="text-sm font-bold text-gray-600 text-center mb-4">
+        Warum auslagern, wenn Sie es intern lösen können?<br>
+        Machen Sie es wie Mario: Ab in die Röhre (TUBE)!
+      </p>
+      <ul class="space-y-3 text-gray-700 text-sm">
+        <li>✅ Direkter Upload und sofortiger Übersetzungszugriff</li>
+        <li>✅ Neurale Maschinelle Übersetzung + TM und Glossar</li>
+        <li>✅ Ihre menschliche Überprüfung für Premium-Qualität</li>
+        <li>✅ Unbegrenzte Anzahl an Sprachen</li>
+        <li>✅ Entwickelt für alle Arten von Inhalten</li>
+        <li>✅ Volle CAT-Tool-Integration und technischer Support</li>
+      </ul>
+      <p class="mt-6 text-sm text-gray-500">
+        💬 Wirtschaftliche, nutzungsbasierte Kosten.
+      </p>
+      <a href="mailto:g.gambuto@dema-solutions.com?subject=TUBE - ANFRAGE INFORMATIONEN" aria-label="Infos zu TUBE anfordern">
+        <button class="mt-6 bg-white text-green-700 hover:bg-gray-100 font-semibold px-6 py-2 rounded-full w-full transition">
+          TUBE testen
+        </button>
+      </a>
+    </div>
+  </section>
+
+  <!-- Ecosystem Flow Section -->
+  <section class="bg-gradient-to-r from-teal-600 via-indigo-600 to-green-600 text-white py-16">
+    <div class="max-w-5xl mx-auto text-center px-6">
+      <h3 class="text-3xl font-bold mb-6">🌍 Das DEMA Technologie-Ökosystem</h3>
+      <p class="mb-10 text-lg opacity-90">
+        Ein nahtloser Workflow, der zentralisierte Memories, optimierte Inhalte und mehrfache KI-Qualitätsprüfungen verbindet.<br>
+        Garantiert Einsparungen, Premium-Qualität, Schnelligkeit, modernste Technologie und volle Transparenz.
+      </p>
+
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex flex-col items-center">
+          <div class="text-5xl mb-2">🧠</div>
+          <p class="font-semibold">1MEMORY</p>
+          <p class="text-sm opacity-80">Zentralisiertes TM-Portal</p>
+        </div>
+
+        <div class="text-4xl md:text-5xl">➡️</div>
+
+        <div class="flex flex-col items-center">
+          <div class="text-5xl mb-2">🤖</div>
+          <p class="font-semibold">PRAISE</p>
+          <p class="text-sm opacity-80">Textoptimierung<br>
+            &<br>
+            KI-Qualitätsprüfungen</p>
+        </div>
+
+        <div class="text-4xl md:text-5xl">➡️</div>
+
+        <div class="flex flex-col items-center">
+          <img 
+            src="../images/mario-super-mario.gif"
+            class="pipe-icon object-contain"
+            alt="TUBE Icon"
+          />
+          <p class="font-semibold">TUBE</p>
+          <p class="text-sm opacity-80">Smarte Übersetzung<br>
+            &<br>
+            Superschnelle Lieferung</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-8 text-sm text-gray-500">
+    © 2025 DEMA Solutions — 
+    <a href="https://www.dema-solutions.com" target="_blank" class="text-teal-600 hover:underline">www.dema-solutions.com</a>
+  </footer>
+
+</body>
+</html>
